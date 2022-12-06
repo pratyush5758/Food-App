@@ -7,5 +7,8 @@ export default{
     PIZZASLICE2 : require('./Pizzaslice2.jpg'),
     SECOND : require('./Second.jpg'),
     NEW : require('./New.jpg'),
-
+    CELEBRATE : require('./Celebrate.jpg'),
+    VEGE : require('./Vege.jpg'),
+    CHICKEN : require('./Chicken.jpg'),
+    NOODLES : require('./Noodles.jpg'),
 }
