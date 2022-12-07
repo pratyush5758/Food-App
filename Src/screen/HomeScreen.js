@@ -14,22 +14,27 @@ import {IMAGES} from '../assets';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
+import { useNavigation } from '@react-navigation/native';
 const Food_recipe = [
   {
     image: IMAGES.NOODLES,
     Name: 'Pasta',
     title: 'Spaghetti With Shrimp Sauce',
     time: '30 Mins | 1 serving',
+    
   },
+   
   {
     image: IMAGES.CHICKEN,
     Name: 'Chicken',
     title: 'Spaghetti With Shrimp Sauce',
     time: '30 Mins | 1 serving',
   },
+    
 ];
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={{backgroundColor: 'white', flex: 1}}>
       <View style={styles.mainview}>
@@ -68,7 +73,7 @@ const HomeScreen = () => {
         data={Food_recipe}
         horizontal={true}
         renderItem={({item}) => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen', {Detail:item})}>
             <View style={{marginLeft:20, marginTop: 15}}>
               <ImageBackground
                 source={item.image}

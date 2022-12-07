@@ -18,6 +18,8 @@ import {
   View,
 } from 'react-native';
 import Routes from './Src/Routes';
+import { NavigationContainer } from '@react-navigation/native';
+
 
 
 
@@ -29,7 +31,11 @@ const App = () => {
   
 
   return (
+    <NavigationContainer>
    <Routes/>
+
+    </NavigationContainer>
+    
   );
 };
 
